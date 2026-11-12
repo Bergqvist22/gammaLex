@@ -202,3 +202,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# Course material (contains private contact details), kept local only
+Capstone_case_req.docx.pdf

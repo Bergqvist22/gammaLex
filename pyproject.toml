@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lib_gammalex"
 version = "0.1.0"
-description = "Project 2 - Fact-extraction from texts"
+description = "Project 2 - Open-weight models for evidence extraction"
 authors = [
     { name = "Ethics of AI - GammaLex Project 2" },
 ]
-license = "MIT"
+license = "Apache-2.0"
 readme = "README.md"
-requires-python = "~=3.14.0"
+requires-python = "~=3.12.0"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
@@ -25,9 +25,18 @@ dependencies = [
     "numpy",
     "pandas",
     "scikit-learn",
+    "jsonschema",
 ]
 
 [project.optional-dependencies]
+# GPU-side dependencies for the open-weight baselines and fine-tuning (installed on CARC, not in CI)
+ml = [
+    "torch",
+    "transformers",
+    "datasets",
+    "peft",
+    "accelerate",
+]
 dev = [
     "build",
     "ipykernel",

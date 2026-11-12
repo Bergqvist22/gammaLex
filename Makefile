@@ -1,4 +1,4 @@
-.PHONY: clean data lint format requirements upgrade build install help sync_data_up sync_data_down sync_models_up sync_models_down test docs docs_serve create_environment remove_environment register_environment increment_version_number preflight
+.PHONY: clean lint format requirements upgrade build install help sync_data_up sync_data_down sync_models_up sync_models_down test docs docs_serve create_environment remove_environment register_environment increment_version_number preflight
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -10,7 +10,7 @@
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PROJECT_NAME = gammalex
 MODULE_NAME = lib_gammalex
-PYTHON_VERSION = 3.14
+PYTHON_VERSION = 3.12
 PYTHON_INTERPRETER = python
 
 # Set to true to make `make install` increment the patch version too
@@ -184,10 +184,6 @@ increment_version_number:
 #################################################################################
 # PROJECT RULES                                                                 #
 #################################################################################
-## Make dataset
-data: requirements
-	@echo "$(MSG_PREFIX) generating dataset"
-	$(PROJECT_DIR)/.venv/bin/python src/lib_gammalex/dataset.py
 
 #################################################################################
 # Self Documenting Commands                                                     #
