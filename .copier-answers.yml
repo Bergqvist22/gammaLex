@@ -1,0 +1,26 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v1.3.22
+_src_path: gh:stellarshenson/copier-data-science
+ai_assistant: []
+author_name: Ethics of AI - GammaLex Project 2
+custom_config: ''
+dataset_storage: none
+dependency_file: pyproject.toml
+description: Project 2 - Fact-extraction from texts
+docker_support: 'No'
+docs: mkdocs
+env_encryption: 'No'
+env_name: gammalex
+environment_manager: uv
+git_init: 'No'
+jupyter_kernel_support: 'Yes'
+linting_and_formatting: ruff
+module_name: lib_gammalex
+open_source_license: MIT
+package_repository: none
+project_name: gammaLex
+pydata_packages: basic
+python_version_choice: '3.14'
+repo_name: gammalex
+scaffold_agents: 'No'
+testing_framework: pytest

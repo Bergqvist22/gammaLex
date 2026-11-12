@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lib_gammalex"
+version = "0.1.0"
+description = "Project 2 - Fact-extraction from texts"
+authors = [
+    { name = "Ethics of AI - GammaLex Project 2" },
+]
+license = "MIT"
+readme = "README.md"
+requires-python = "~=3.14.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "loguru",
+    "tqdm",
+    "typer",
+    "python-dotenv",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "ipykernel",
+    "ipython",
+    "nbdime",
+    "pip",
+    "mkdocs",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lib_gammalex*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 99
+src = ["src/lib_gammalex"]
+include = ["pyproject.toml", "src/lib_gammalex/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lib_gammalex"]
+force-sort-within-sections = true
